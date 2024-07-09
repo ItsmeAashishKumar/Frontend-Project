@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.CryptoDictionary {
+  width: 100%;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  height: 107vh;
+}
+
+.heading {
+  display: flex;
+  margin-top: 40px;
+  mix-blend-mode: screen;
+  flex-direction: column;
+  text-align: center;
+}
+
+.heading1 {
+  margin-top: 5px;
+  color: white;
+  font-size: 24px;
+  font-family: "Outfit";
+}
+
+.heading2 {
+  font-family: "Outfit";
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  color: #FFFFFF66;
+}
+
+.center-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-img {
+  width: 80%;
+  border-radius: 20px;
+  border: 0.5px solid gray;
+  position: relative; /* Ensure this is the containing block for absolute children */
+}
+
+.p1 {
+  font-size: 24px;
+  color: white;
+}
+
+.p2 {
+  font-size: 16px;
+  color: gray;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 5%;
+  left: 12%;
+  font-size: 16px;
+  font-family: "Outfit";
+}
+
+.text-overlay p {
+  margin: 5px 0;
+}
+
+.overlay-img {
+  position: absolute;
+  right: 170px; /* Adjust as needed to position it correctly */
+  top: 370px; /* Adjust as needed to position it correctly */
+  width: 60px;
+  background-color: rgb(57, 56, 56);
+  opacity: 0.5;
+  height: 60px;
+  border-radius: 100%;
+  border: 0.5px solid gray;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 40px;
+  border-radius: 1000px;
+  background-color: #FFFFFF0D;
+  position: relative;
+}
+
+.buttons button {
+  flex: 1;
+  border: none;
+  background-color: transparent;
+  color: gray;
+  font-family: "Outfit";
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+.buttons button.active {
+  color: white;
+  font-weight: bold;
+}
+
+.buttons::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: #FFFFFF26;
+  border-radius: 1000px;
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
+.buttons button:first-child.active ~ .buttons::before {
+  transform: translateX(0);
+}
+
+.buttons button:last-child.active ~ .buttons::before {
+  transform: translateX(100%);
+}
+
+
+ /* Media Queries */
+ @media (max-width: 768px) {
+  .overlay-img {
+  top:180px;
+  right: 100px;
+  width: 40px;
+  height: 40px;
+  }
+  .CryptoDictionary{
+
+    height: 75vh;
+  }
+}
+@media (max-width:480px){
+  .heading1{
+    font-size: 20px;
+  }
+  .heading2{
+    font-size: 15px;
+  }
+  .CryptoDictionary{
+    margin-top: 10px;
+    height: 60vh;
+    margin-top: -20px;
+  }
+  .overlay-img {
+    top:115px;
+    right: 60px;
+    width: 20px;
+    height: 20px;
+    }
+}

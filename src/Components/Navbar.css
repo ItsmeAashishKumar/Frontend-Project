@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 64px;
+    background-color: black;
+    border-bottom: 1px solid;
+}
+
+.Navbar.scrolled {
+    mix-blend-mode: screen;
+    backdrop-filter: blur(5px);
+}
+
+.nav-screen{
+    width: 100%;
+    
+}
+.Nav-ele {
+    max-width: 1284px;
+    background-color: transparent;
+    padding-top: 10px;
+    display: flex;
+    gap: 2rem;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.Nav-ele1>img:hover{
+    cursor: pointer;
+}
+
+.Nav-ele2 {
+    display: flex;
+    gap: 2rem;
+}
+
+.Nav-ele2 > h1 {
+    font-family: 'Outfit';
+    font-size: 16px;
+    color: #FFFFFFB3;
+    cursor: pointer;
+    font-weight: 100px;
+}
+
+.Nav-ele2>h1:hover{
+    color: white;
+}
+
+.Nav-ele3 {
+    flex: 1;
+    margin-left: 20px; /* Adjust as needed */
+}
+
+.Nav-ele3 > input {
+    width: 100%;
+    border-radius: 1000px;
+    border: 1px solid rgba(255, 255, 255, .05);
+    padding: 13px;
+    background: rgba(255, 255, 255, .07);
+    height: 42.5px;
+    font-family: 'Outfit';
+    font-weight: bold;
+}
+
+.Nav-ele4 {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Nav-ele4 > button {
+    background-color: white;
+    height: 35px;
+    border-radius: 10px;
+    width: 100px;
+    font-family: "Outfit";
+    font-weight: 400px;
+    font-size: 14px;
+    transition: background-color 0.6s ease;
+}
+.Nav-ele4>button:hover{
+     background-color: rgb(194, 193, 193);
+    cursor: pointer;
+}
+
+.img-back {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fa8922;
+    border-radius: 100%;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .Nav-ele2,
+    .Nav-ele3,
+    .img-back,
+    .btn {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        padding: 15px;
+    }
+}

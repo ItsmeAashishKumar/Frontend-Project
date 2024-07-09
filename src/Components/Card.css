@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .c{
+    background-color: black;
+    
+  }
+.card{
+  width: 100%;
+  margin-top: -165px;
+  background-color: transparent;
+}
+
+.card>img{
+  z-index: 999;
+  width: 100%;
+  background-color: black;
+  mix-blend-mode: screen;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+  .c{
+    margin-top: 160px;
+  }
+}
+
+@media (max-width:480px){
+  .c{
+    margin-top: 160px;
+  }
+  .c{
+    height: 100vh;
+  }
+}
